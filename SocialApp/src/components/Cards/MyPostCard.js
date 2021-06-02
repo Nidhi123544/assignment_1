@@ -147,7 +147,8 @@ class MyPostCard extends Component {
             <div key={post.postId}>
                 <Card style={{ padding: "20px 20px 0px 20px", marginBottom: '20px' }}>
                     <CardHeader
-                        avatar={<Avatar aria-label="recipe" style={{ textTransform: 'capitalize', backgroundColor: "green" }}>{post.displayName ? post.displayName[0] : 'N/A'}</Avatar>}
+                        avatar={
+                        <Avatar aria-label="recipe" style={{ textTransform: 'capitalize', backgroundColor: "green" }}>{post.displayName ? post.displayName[0] : 'N/A'}</Avatar>}
                         action={
                             <IconButton aria-label="settings">
                                 <MoreVert
@@ -177,9 +178,9 @@ class MyPostCard extends Component {
                         title={post.displayName}
                         subheader={moment(post.createdAt).format('llll')}
                     />
-                    {post.imageUrl && <CardMedia
-                        style={{ paddingTop: '50%' }}
-                        image={`${config.backendUrl}/${post.imageUrl}`}
+                    {post.imageUrl && <Avatar
+                        style={{ width:"100%", height:"60%", borderRadius:'0px' }}
+                        src={`${config.backendUrl}/${post.imageUrl}`}
                         title="Images"
                     />}
                     <CardContent>

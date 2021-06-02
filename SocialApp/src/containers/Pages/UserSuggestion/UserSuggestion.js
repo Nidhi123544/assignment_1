@@ -72,7 +72,7 @@ const UserSuggestion = ({
         formData.append("message", message)
         formData.append("images",files[0])
         postsReducer.createPosts(formData).then(res => {
-            if (res.success) {
+            if (res && res.success) {
                 setState({...initialState});
                 onGetMyPosts();
             }
