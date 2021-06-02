@@ -9,7 +9,7 @@ _Step 3: install node packed " npm install"_
 _Step 4: use ( npm or yarn) start to run the ui._
 
 
-**To Start backend App.**
+**To Start backend App ( ** Create folder with name of uploads & profileImage in the backend root directory ).**
 _________________________________________________________________________________________
 
 _Step 1: Start mongodb in you system._
